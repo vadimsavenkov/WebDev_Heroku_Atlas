@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Experts Destinations</title>
+  
+  <%- include('./partials/css-global'); %>
+  
+</head>
+
+  <%- include('./partials/header.ejs'); %>
+
+<body>
+  <div class="h2">
+    <h2>EXPLORE THE WORLD WITH TRAVEL EXPERTS!</h2>
+    <a class="button-sign-up" href="register.html"></i> SIGN UP FOR FREE</a>
+    <section class="gallery"></section>
+  </div> 
+</body> 
+<main>
+<div class="container_contact">
+  <h3>Contact form</h3>
+  <form action="https://formspree.io/mzbjjykn" method="post">
+    <div>
+     <label for="fname" class="required">Name</label>
+     <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+     <div>
+       <label for="email_input" class="required">Email Address</label>
+       <input type="email" size="25" name="email" id="email_input" placeholder="Enter your email address" required>
+       <div>          
+         <label for="subject" class="required">Message</label>
+         <textarea id="subject" name="subject" placeholder="Your message.." style="height:100px" required></textarea>
+         <input type="submit" value="Submit">
+       </div>
+     </div>  
+   </div>
+  </form>
+</div>
+</main>
+
+<%- include('./partials/js-gallery'); %>
+<%- include('./partials/js-toggle'); %>  
+
+</body>
+
+<%- include('./partials/foot'); %>
+
+</html>
