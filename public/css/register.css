@@ -1,0 +1,89 @@
+  /* ------------------ */
+ /* REGISTER CONTAINER */
+/* ------------------ */
+
+/* Adjust register container  */ 
+
+.sky {
+  margin: 0; 
+  background-image: url("https://picsum.photos/id/130/2000/2000");; 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  padding: 0;    
+}
+
+.container_register {
+ 
+  padding: 30px 30px ; 
+  background-image: url("https://picsum.photos/id/124/1000/1000"); 
+  margin: 120px 0; 
+  border-radius: 7px;   
+  box-shadow: 10px 10px 15px 2px lightblue;  
+}
+ 
+.container_register h2 { 
+  margin: 1px;   
+  padding: 0.15em;    
+  font-variant: small-caps; 
+  font-size: 30px; 
+  text-align: center;  
+} 
+
+/* Placement adjustments */
+
+input[type=text], input[type=email], input[type=submit], input[type=password] {
+ 
+  width:100%; 
+  padding: 6px; 
+  margin: 10px 0;
+  display: inline-block;
+  border: 2px solid #ccc;   
+  box-sizing: border-box;  
+}
+
+/* add input required */
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input:focus:invalid  {
+  background-color: rgba(241, 41, 41, 0.64);
+  border: 0px;
+  transition: background-color 300ms;
+}
+
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+/* Check box adjustment */
+
+input[type=checkbox] {
+   width: 5%; 
+}
+
+.register_form {
+  align-self: flex-start; 
+  display: grid; 
+  justify-items: center; 
+  align-items: center;
+}
+
+#form_submit {
+  color: black; 
+  font-weight: bold; 
+  background-image: url("https://picsum.photos/id/203/1200/1200");     
+  font-size: 25px; 
+  width: 100%;
+  padding: 10px 1px 10px;  
+  border: none; 
+  font-family: "Kurale", sans-serif; 
+}
+
+
+    

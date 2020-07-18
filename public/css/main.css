@@ -1,0 +1,319 @@
+   /* ---------------- */
+  /*   TOPOGRAPHY     */
+ /* ---------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:ital,wght@0,100;0,200;0,500;0,700;1,100;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+   /* ------------------------- */
+  /* HEADER and LOGO CONTAINER */
+ /* ------------------------- */
+
+/* Create and adjust header container */
+.header_container {
+  display: flex;    
+  margin: 0; 
+  align-items: center;
+  background-image: url("https://picsum.photos/id/10/1000/1000");   
+  background-size: cover;
+}
+
+/* Adjust header parameters inside the container */
+header_container h1 {
+  margin: 0; 
+  padding: 0.15em;   
+  font-variant: small-caps; 
+  font-size: 10px; 
+  color: black; 
+  font-family: "Kurale", sans-serif; 
+} 
+   
+
+   /* ---------- */
+  /* NAVIGATION */
+ /* ---------- */
+
+/* Locate navigation menue at the top right corner for the LOGIN page */
+ 
+.nav {
+  font-family: "Allura", sans-serif; 
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  text-align: center;
+  padding: 20px;   
+}
+
+nav ul {
+  display: none; 
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+  text-decoration: none;
+}
+
+nav a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px; 
+}
+
+/* Highlight Login tab */
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav li.highlight {
+  background-color: #e0eeee;
+  color: white;
+  float: left; 
+  height: 25px; 
+} 
+
+  /* --------------------- */
+ /* HAMBURGER MENU BUTTON */
+/*---------------------- */
+
+.visible {
+  display: block;
+}
+
+.visible li{
+  text-align: left; 
+}
+
+/* Apply these styles when the screen is in 'landscape' orientation (i.e. horizontal nav on desktop) */
+@media (orientation: landscape) {
+  
+/* Horizontal nav on desktop */ 
+nav ul {
+ display: flex;
+}
+
+/* This is a shorthand for `flex: 1 1 auto. The items will grow to fill any empty space equally. */
+nav ul li {
+  flex: auto;
+}
+
+/* Don't show hamburger menu on desktop */
+nav button {
+  display: none;
+}
+}
+
+.menu_btn {
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+  /* ------------ */
+ /* HERO SECTION */
+/*------------  */
+
+/* Hero section image */
+
+body {
+  margin: 0;  
+  background-image: url("https://picsum.photos/id/179/2000/2000"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  padding: 0;    
+}
+
+ main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+/* Adjust header container in the middle of Hero section */ 
+
+.h2 { 
+  padding: 0;     
+  font-variant: small-caps;   
+  font-size: 20px; 
+  text-align: center; 
+  margin: 50px 0;   
+} 
+
+.h3 { 
+  padding: 10px;    
+  font-variant: small-caps;   
+  font-size: 30px; 
+  text-align: center; 
+  margin: 100px 0;  
+} 
+
+.button-sign-up {
+  padding: 1em 1em;
+  background-image: url("https://picsum.photos/id/443/300/300");   
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  text-align: center; 
+  line-height: 30px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+} 
+
+.button-sign-up:hover {
+  background-image: linear-gradient(rebeccapurple, lightblue);
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input:focus:invalid  {
+  background-color: rgba(241, 41, 41, 0.64);
+  border: 0px;
+  transition: background-color 300ms;
+}
+
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+  /*----------------*/
+ /* GALLERY SECTION*/
+/*----------------*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  max-width: 800px; 
+  margin: auto; 
+}
+
+.gallery img {
+  padding-top: 20px; 
+  padding-right: 10px; 
+}
+
+.gallery a {
+  Color: black;
+  padding-top: 50px;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  font-size: 15px;
+} 
+
+ /*----------------------*/
+ /* CONTACT FORM SECTION */
+/*----------------------*/
+
+form {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px; 
+  margin-bottom: 15px;
+  font-size: 30px; 
+}
+
+
+label {
+  text-align: left; 
+  font-size: 20px; 
+  font-family: "Kurale", sans-serif; 
+}
+
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  margin-top: 6px; 
+  margin-bottom: 10px;   
+  resize:vertical; 
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+}
+
+input[type=submit] {
+  font-size: 40px; 
+  border-radius: 5px;
+  border: 2px solid rgb(49, 51, 51); 
+  font-family: "Allura", sans-serif;  
+}
+
+
+/* When moving the mouse over the submit button, add a brighter color */
+input[type=submit]:hover {
+  background-color: #5d53e7;
+}
+
+/* Add a background color and some padding around the form */
+.container_contact {
+  border-radius: 5px;
+  background-image: url("https://picsum.photos/id/124/1000/1000"); 
+  padding: 0 ;
+  width: 500px; 
+  margin: 100px 0; 
+  }
+
+.container_contact h3 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Karla", sans-serif;  
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input:focus:invalid  {
+  background-color:red;
+  border: 0px;
+  transition: background-color 300ms;
+}
+
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+   /* -------------- */
+ /* FOOTER section */
+/* -------------- */
+
+/* Footer Section settings */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightblue;
+  opacity: 0.8;  
+  color: black;
+  text-align: center;
+  padding: 0.5em 0.5em;
+  font-family: "Kurale", sans-serif; 
+}

@@ -1,0 +1,81 @@
+  /*---------------  */
+ /* LOGIN CONTAINER */
+/* --------------- */
+
+/* Adjust login container in the middle of Hero section */ 
+
+.container_login {
+  padding: 0;    
+  background-image: url("https://picsum.photos/id/124/500/500"); 
+  border-radius: 7px;   
+  box-shadow: 10px 10px 15px 2px lightblue;
+  margin-bottom: 300px; 
+
+}
+ 
+.mountain {
+  margin: 0; 
+  background-image: url("https://picsum.photos/id/1057/2000/2000");; 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  padding: 0;    
+}
+
+
+/* Adjust header in login container */
+
+.h2 { 
+     
+  padding: 0em;    
+  font-variant: small-caps;   
+  font-size: 20px; 
+  text-align: center; 
+  margin: 100px 0; 
+}  
+
+ .container_login h3 { 
+  margin: 0;   
+  padding: 0em;   
+  font-variant: small-caps;   
+  font-size: 30px; 
+  text-align: center;  
+}  
+
+/* Placement adjustments */
+
+input[type=email], input[type=submit], input[type=password] {
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+}
+
+/* add input required */
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input:focus:invalid  {
+  background-color: rgba(241, 41, 41, 0.64);
+  border: 0px;
+  transition: background-color 300ms;
+}
+
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+/* Log in main container settings  */
+.signup_form { 
+  display: grid;  
+} 
+
+ 
