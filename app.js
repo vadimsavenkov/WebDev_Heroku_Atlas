@@ -41,7 +41,7 @@ app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define an endpoint handler for the home page 
-app.get('/', function(request, response){
+app.get('/index', function(request, response){
   response.render('index',{});
 })
 
@@ -54,9 +54,9 @@ app.get('/register', function(request, response){
 })
 
 // Define an endpoint handler for the home page 
-app.get('/destinations', function(request, response){
-  response.render('destinations',{});
-})
+// app.get('/destinations', function(request, response){
+//   response.render('destinations',{});
+// })
 
 // Define an endpoint handler for the individual animal pages
 app.get('/:id', function(request, response){
@@ -81,8 +81,8 @@ app.get('/api/destinations', function(request, response){
 
   // response.json(animals);
 
-  Gallery.find(function(error, result) { 
-    response.json(result);
+  Destinations.find(function(error, destinations) { 
+    response.json(destinations);
   });
 
 })
