@@ -6,6 +6,9 @@
   <title>Hello <%= title %>!</title>
   <%- include('./partials/css-global'); %>
 </head>
+
+<%- include('./partials/header.ejs'); %>
+
 <body>
   <header class="full-vh center-items">
     <figure>
@@ -13,5 +16,12 @@
       <figcaption>Hello <%= title %>!</figcaption>
     </figure>
   </header>
+
+<%- include('./partials/js-gallery'); %>
+<%- include('./partials/js-toggle'); %>  
+
 </body>
+
+<%- include('./partials/foot'); %>
+
 </html>
