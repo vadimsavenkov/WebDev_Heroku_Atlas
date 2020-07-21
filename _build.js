@@ -22,6 +22,6 @@ db.once('open', function() {
   console.log('Connected to DB...');
 });
 
-Destination.insertMany(dbSeed, function(error, destinatioin) {
+Destination.insertMany(dbSeed, function(error, destination) {
   console.log('Data import completed.')
 });
