@@ -10,7 +10,8 @@ const gallerySchema = new mongoose.Schema(
     id:           Number,
     title:        String,
     url:          String,
-    travel:       String
+    filename:     String,
+    place:        String
   }
 );
 
