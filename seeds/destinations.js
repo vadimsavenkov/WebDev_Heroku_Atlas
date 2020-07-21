@@ -1,39 +1,45 @@
 const destinations = [
   {
     id: 164,
-    title: "Italy",
-    url: 'https://unsplash.com/photos/dBtWLliLt5k',
-    travel: 'Europe'
+    title: "Europe",
+    url: 'https://unsplash.com/photos/t2hgHV1R7_g',
+    filename: 'Canal',
+    place: 'Netherlands'
   },
   {
     id: 174,
-    title: "Phuket,Thailand",
+    title: "Asia Pacific",
     url: 'https://unsplash.com/photos/n7DY58YFg9E',
-    travel: 'Asia Pacific'
+    filename: 'Rice Terrace', 
+    place: 'Indonesia'
   },
   {
     id: 482,
-    title: 'Horseshoe bend, Arizona',
-    url: 'https://unsplash.com/photos/14a9-EZ_vYw',
-    travel: 'North America'
+    title: 'North America',
+    url: 'https://unsplash.com/photos/JZKGkj46bwE',
+    filename: 'Mountains', 
+    place: 'Canada'
   },
   {
     id: 645,
-    title:'Machu-Pichu, Peru',
+    title:'South America',
     url: 'https://unsplash.com/photos/GFOnOrv-t6w',
-    travel: 'South America'
+    filename: 'Machu-Pichu',
+    place: 'Peru'
   },
   {
     id: 525,
-    title:'Tamnougalt, morocco',
-    url: 'https://unsplash.com/photos/9-5-WYEBDz0',
-    travel: 'Africa'
+    title:'North Africa',
+    url: 'https://unsplash.com/photos/_VqyrvQi6do',
+    filename: 'Desert',
+    place: 'Morocco'
   },
   {
     id: 643,
-    title:'Twelve apostles',
-    url: 'https://unsplash.com/photos/hM0jUUU5eDg',
-    travel: 'Australia'
+    title:'Australia',
+    url: 'https://unsplash.com/photos/Pa0AqyCLeec',
+    filename: 'Serfing',
+    place: 'New South Wales'
   }
 ]
 

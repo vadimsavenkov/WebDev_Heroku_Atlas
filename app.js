@@ -41,7 +41,7 @@ app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define an endpoint handler for the home page 
-app.get('/index', function(request, response){
+app.get('/', function(request, response){
   response.render('index',{});
 })
 

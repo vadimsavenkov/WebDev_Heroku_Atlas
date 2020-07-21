@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello <%= title %>!</title>
+  <title>Welcome to <%= title %>!</title>
   <%- include('./partials/css-global'); %>
 </head>
 
@@ -11,9 +11,9 @@
 
 <body>
   <header class="full-vh center-items">
-    <figure>
+    <figure id=figure_text>
       <img src="http://picsum.photos/id/<%= id %>/600" alt="<%= title %>">
-      <figcaption>Hello <%= title %>!</figcaption>
+      <figcaption>Welcome to <%= title %>!</figcaption>
     </figure>
   </header>
 
