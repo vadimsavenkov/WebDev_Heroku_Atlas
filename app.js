@@ -79,8 +79,6 @@ app.get('/:id', function(request, response){
 // This is the endpoint that the frontend gallery script calls (see: ./public/js/app.js).
 app.get('/api/destinations', function(request, response){
 
-  // response.json(animals);
-
   Destinations.find(function(error, destinations) { 
     response.json(destinations);
   });
