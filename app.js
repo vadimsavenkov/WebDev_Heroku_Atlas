@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config();
 const cors = require('cors');
 
 // Models
-const Destination = require('./models/destination.js');
+const Destinations = require('./models/destinations.js');
 
 // Hide creds from repo
 const mongoDB = process.env.MONGODB_URL;
@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 // Cors origin URL - Allow inbound traffic from origin //
 corsOptions = {
-  origin: "https://assignmentdh.herokuapp.com",
+  origin: "https://cprg210-travel.herokuapp.com",
   optionsSuccessStatus: 200 
   };
   app.use(cors(corsOptions));
@@ -58,15 +58,15 @@ app.get('/:id', function(request, response){
 
 // model.findOne returns the first object it finds
 // model.find will always return an array, even if it only finds one 
-  Destination.findOne({'id': request.params.id}, function(error, destination) {
+  Destinations.findOne({'id': request.params.id}, function(error, destinations) {
   
 // Check for IDs that are not in our list
-    if (!destination) {
+    if (!destinations) {
       return response.send('Invalid ID.');
     }
 
     // Compile view and respond
-    response.render('destinations',destination);
+    response.render('destinations',destinations);
   });
 })
 
