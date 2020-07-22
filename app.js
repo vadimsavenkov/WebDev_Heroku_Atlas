@@ -3,10 +3,9 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-const cors = require('cors');
 
 // Models
-const Gallery = require('./models/destination.js');
+const Destination = require('./models/destination.js');
 
 // Hide creds from repo
 const mongoDB = process.env.MONGODB_URL;
@@ -29,13 +28,6 @@ db.once('open', function() {
 const app = express();
 app.set('view engine', 'ejs');
 
-// cors origin URL - Allow inbound traffic from origin
-corsOptions = {
-  origin: "https://dashboard.heroku.com",
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-app.use(cors(corsOptions));
-
 // automatically check if requested file is found in /public
 // if yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
@@ -53,19 +45,14 @@ app.get('/register', function(request, response){
   response.render('register',{});
 })
 
-// Define an endpoint handler for the home page 
-// app.get('/destinations', function(request, response){
-//   response.render('destinations',{});
-// })
-
-// Define an endpoint handler for the individual animal pages
+// Define an endpoint handler for the individual destination pages
 app.get('/:id', function(request, response){
 
-  // model.findOne returns the first object it finds
-  // model.find will always return an array, even if it only finds one 
-  Gallery.findOne({'id': request.params.id}, function(error, destination) {
+// model.findOne returns the first object it finds
+// model.find will always return an array, even if it only finds one 
+  Destination.findOne({'id': request.params.id}, function(error, destination) {
   
-    // Check for IDs that are not in our list
+// Check for IDs that are not in our list
     if (!destination) {
       return response.send('Invalid ID.');
     }
@@ -79,12 +66,13 @@ app.get('/:id', function(request, response){
 // This is the endpoint that the frontend gallery script calls (see: ./public/js/app.js).
 app.get('/api/destinations', function(request, response){
 
-  Destinations.find(function(error, destinations) { 
-    response.json(destinations);
-  });
+// response.json(destinations);
+
+Destinations.find(function(error, destinations) { 
+  response.json(destinations);
+});
 
 })
-
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function(req, res, next) {
