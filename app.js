@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 
 // Models
 const Destination = require('./models/destination.js');
@@ -27,6 +28,13 @@ db.once('open', function() {
 // create express app
 const app = express();
 app.set('view engine', 'ejs');
+
+// Cors origin URL - Allow inbound traffic from origin //
+corsOptions = {
+  origin: "https://assignmentdh.herokuapp.com",
+  optionsSuccessStatus: 200 
+  };
+  app.use(cors(corsOptions));
 
 // automatically check if requested file is found in /public
 // if yes, return that file as a response to the browser
