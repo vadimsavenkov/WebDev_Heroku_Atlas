@@ -11,7 +11,8 @@ const gallerySchema = new mongoose.Schema(
     title:        String,
     url:          String,
     filename:     String,
-    place:        String
+    place:        String,
+    text:         String
   }
 );
 
