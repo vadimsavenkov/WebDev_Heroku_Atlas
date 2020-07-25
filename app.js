@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 
-// const moment = require('moment');
-// const today = moment(); 
-// console.log(today.format('YYYY'));
+const moment = require('moment');
+const today = moment(); 
+console.log(today.format('YYYY'));
 
 // Our Model
 const Destinations = require('./models/destinations.js');
@@ -94,10 +94,10 @@ app.use(function(req, res, next) {
   res.render('404', {page:"404"});
 });
 
-// app.use((req, res, next)=>{
-//   res.locals.moment = 2020;
-//   next();
-// });
+app.use((req, res, next)=>{
+  res.locals.moment = 2020;
+  next();
+});
 
 // start up server
 const PORT = process.env.PORT || 3000;
