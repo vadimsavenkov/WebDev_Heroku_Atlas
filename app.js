@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 
+const moment = require('moment');
+const today = moment(); 
+console.log(today.format('YYYY'));
+
 // Our Model
 const Destinations = require('./models/destinations.js');
 
@@ -52,6 +56,10 @@ app.get('/register', function(request, response){
   response.render('register',{});
 })
 
+app.get('/gallery', function(request, response){
+  response.render('gallery',{});
+})
+
 // Define an endpoint handler for the individual destination pages
 app.get('/:id', function(request, response){
 
@@ -84,6 +92,11 @@ Destinations.find(function(error, destinations) {
 app.use(function(req, res, next) {
   res.status(404);
   res.render('404', {page:"404"});
+});
+
+app.use((req, res, next)=>{
+  res.locals.moment = 2020;
+  next();
 });
 
 // start up server
