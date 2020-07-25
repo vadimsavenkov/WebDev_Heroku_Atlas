@@ -6,16 +6,16 @@
   <title>Travel Experts Register Page</title>
   <%- include('./partials/css-global'); %>
 </head>
-  <%- include('./partials/header.ejs'); %>
-<body class="sky"> 
-  <main class="register_form">
-    <form action="#" method="post">
-      <div class="container_register">
-        <h2 id="register">Registration Page</h2>
-        <div>
-          <label for="name_input" class="required">Full Name</label>
-          <input type="text" name="name" id="name_input" maxlength="25" class="register_box" placeholder="Enter your full name" required>
-           <div>
+  <%- include('./partials/header_reg.ejs'); %>
+ <body class="sky"> 
+   <main class="register_form">
+     <form action="#" method="post">
+       <div class="container_register">
+         <h2 id="register">Registration Page</h2>
+         <div>
+           <label for="name_input" class="required">Full Name</label>
+           <input type="text" name="name" id="name_input" maxlength="25" class="register_box" placeholder="Enter your full name" required>
+            <div>
               <label for="email_input" class="required">Email Address</label>
               <input type="email" name="email" id="email_input" maxlength="25" class="register_box" placeholder="Enter your email address" required>
               <div>
@@ -24,19 +24,22 @@
                 <div>
                   <label for="pass_confirm" class="required">Confirm Password</label>
                   <input type="password" name="pass_confirm" id="pass_confirm" minlength="8" class="register_box" placeholder="Confirm your password" required>
-                  <div>
-                    <input type="submit" value="Register" id="form_submit"> 
-                    <input type="checkbox" name="Subscribe" id="form_checkup"> Subscribe to Our Newsletter
+                  <div class="subscribe">
+                    <input type="submit" value="Register" id="form_submit">
+                    <div> 
+                     <input type="checkbox"
+                      name="Subscribe" id="form_checkup"> Subscribe to Our Newsletter
                     </div>
-                  </div>
-                </div>
+                   </div>
+                 </div>
+               </div>
              </div>
            </div>
-        </div>
-    </form>
-  </main>
-<%- include('./partials/js-gallery'); %>
-<%- include('./partials/js-toggle'); %>  
+         </div>
+     </form>
+   </main>
+    <%- include('./partials/js-gallery'); %>
+    <%- include('./partials/js-toggle'); %>  
 </body>
-<%- include('./partials/foot'); %>
+  <%- include('./partials/foot'); %>
 </html>
