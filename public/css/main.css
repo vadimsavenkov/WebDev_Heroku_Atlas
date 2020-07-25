@@ -209,7 +209,6 @@
  }
  
  
- 
    /*----------------*/
   /* GALLERY SECTION*/
  /*----------------*/
@@ -244,6 +243,7 @@
  
   .center-items {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
  }
@@ -283,11 +283,10 @@
  /*----------------------*/
  
  form {
-   display: flex; 
+   display: flex;
+   flex-wrap: wrap; 
    justify-content: center; 
    align-items: center;
-   flex-wrap: wrap;
-   width: 500px; 
    margin-bottom: 15px;
    font-size: 30px; 
  }
@@ -337,7 +336,7 @@
    background-image: url("https://picsum.photos/id/124/1000/1000"); 
    padding: 0 ;
    width: 500px; 
-   margin: 100px 0; 
+   margin: 100px 0;  
    }
  
  .container_contact h3 {
@@ -363,7 +362,7 @@
  }
  
     /* -------------- */
-  /* FOOTER section */
+  /* FOOTER SECTION */
  /* -------------- */
  
  /* Footer Section settings */

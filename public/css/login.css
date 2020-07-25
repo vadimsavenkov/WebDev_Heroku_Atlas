@@ -1,4 +1,4 @@
- /*---------------  */
+   /*---------------  */
  /* LOGIN CONTAINER */
 /* --------------- */
 
@@ -75,7 +75,8 @@ input:focus:valid {
 
 /* Log in main container settings  */
 .signup_form { 
-  display: grid;  
+  display: flex;
+  flex-wrap: wrap;  
 } 
 
  

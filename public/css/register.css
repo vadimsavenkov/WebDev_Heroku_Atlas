@@ -67,9 +67,14 @@ input[type=checkbox] {
    width: 5%; 
 }
 
+.subscribe {
+  font-size: 20px;
+}
+
 .register_form {
   align-self: flex-start; 
-  display: grid; 
+  display: flex;
+  flex-wrap: wrap; 
   justify-items: center; 
   align-items: center;
 }
@@ -86,5 +91,4 @@ input[type=checkbox] {
 }
 
 
-    
     
