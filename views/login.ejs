@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Experts Destinations</title>
-  
+  <title>Travel Experts Login Page</title>
   <%- include('./partials/css-global'); %>
-  
 </head>
-
   <%- include('./partials/header.ejs'); %>
-
 <body class="mountain"> 
   <div class="h2">
     <h2>WELCOME TO TRAVEL EXPERTS!</h2>
@@ -22,7 +18,7 @@
         <fieldset>
           <div>
             <label for="email_input" class="required" >Email Address</label>
-            <input type="email" size="25" name="email" id="email_input" placeholder="Enter your email address" required>
+            <input type="email" name="email" id="email_input" placeholder="Enter your email address" required>
             <div>
               <label for="pass_input" class="required"> Password (8 characters minimum) </label>
               <input type="password" name="password" id="pass_input" minlength="8" placeholder="Enter your password" required>
@@ -35,12 +31,8 @@
        </div>
      </form>
   </main>  
-
   <%- include('./partials/js-gallery'); %>
   <%- include('./partials/js-toggle'); %>  
-  
-  </body>
-  
+</body>
   <%- include('./partials/foot'); %>
-  
-  </html> 
+</html> 

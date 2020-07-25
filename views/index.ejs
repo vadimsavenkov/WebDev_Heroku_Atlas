@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Experts Destinations</title>
-  
-  <%- include('./partials/css-global'); %>
-  
+  <title>Travel Experts Main Page</title>
+  <%- include('./partials/css-global'); %>  
 </head>
-
-  <%- include('./partials/header.ejs'); %>
-
+<%- include('./partials/header.ejs'); %>
 <body>
   <div class="h2">
     <h2 id="gallery">EXPLORE THE WORLD WITH TRAVEL EXPERTS!</h2>
     <a class="button-sign-up" href="/register"></i> SIGN UP FOR FREE</a>
+  </div> 
+  <div>  
     <section class="gallery"></section>
   </div> 
 </body> 
@@ -27,7 +25,7 @@
      <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
      <div>
        <label for="email_input" class="required">Email Address</label>
-       <input type="email" size="25" name="email" id="email_input" placeholder="Enter your email address" required>
+       <input type="email" name="email" id="email_input" placeholder="Enter your email address" required>
        <div>          
          <label for="subject" class="required">Message</label>
          <textarea id="subject" name="subject" placeholder="Your message.." style="height:100px" required></textarea>
@@ -38,12 +36,8 @@
   </form>
 </div>
 </main>
-
 <%- include('./partials/js-gallery'); %>
 <%- include('./partials/js-toggle'); %>  
-
 </body>
-
 <%- include('./partials/foot'); %>
-
 </html>

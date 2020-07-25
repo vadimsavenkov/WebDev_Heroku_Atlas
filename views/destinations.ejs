@@ -6,22 +6,16 @@
   <title>Welcome to <%= title %>!</title>
   <%- include('./partials/css-global'); %>
 </head>
-
 <%- include('./partials/header.ejs'); %>
-
 <body>
   <header class="full-vh center-items">
     <figure id=figure_text>
-      <img src="http://picsum.photos/id/<%= id %>/600" alt="<%= title %>">
-      <figcaption>Welcome to <%= place %>!</figcaption>
-    </figure>
-  </header>
-
-<%- include('./partials/js-gallery'); %>
-<%- include('./partials/js-toggle'); %>  
-
+        <figcaption>Welcome to <%= place %>!</figcaption>
+        <img src="http://picsum.photos/id/<%= id %>/600" alt="<%= title %>">
+        <p><%= text %>!</p>
+  </header> 
+  <%- include('./partials/js-gallery'); %>
+  <%- include('./partials/js-toggle'); %>  
 </body>
-
 <%- include('./partials/foot'); %>
-
 </html>
