@@ -3,9 +3,9 @@ fetch('https://cprg210-travel.herokuapp.com/api/destinations')
   .then(function(response) {
     return response.json();
   })
-  .then(function(destination) {
+  .then(function(destinations) {
 
-   const imgList = destination;
+   const imgList = destinations;
 
     // Variable where we will store our img tags
     let imgTemplate = ''; 
