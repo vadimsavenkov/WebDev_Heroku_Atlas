@@ -1,24 +1,19 @@
-This is a project to build 3 page static website with additional enhancements and fullfill requirements of Web Development Course. This project is an assignment 2 for SAIT CPRG-210-XM1.
+This is a project to create multi-page website using Express, Ejs and Mongoose to deploy Destination Gallery to Heroku and MongoDB Atlas. This project is an assignment 3(Node Final) for SAIT CPRG-210-XM1.
 
 ## Project Title
 
-Static "Travel Experts" Website with enhancements
-
-## Project requirement
-
-Enhance a 3 pages static website adding more complexity 
+Dynamic multi-page database-driven "Travel Experts" Website. 
 
 ## Scope of work
 
-# Initial scope:
+1. Create dynamic HTML endpoint handlers (GET/destinations/ :id) and render a view with single destination with desctription.
+2. Return all destinations from ATLAS using JSON API enpoint.
+3. Use fetch() to retrieve the object of arrays from JSON enpoint
+4. Define Mongoose Schema in /models directory and move /seed/destinations.js to MongoDB collection.
+5. Deploy your final version of website through Heroku application 
 
-1. Create 3 pages: index.html, register.html and login.html
-2. Include a headers and hero section
-3. Each page should have a customized navigation panel
-4. Consistent font styles and footers should be defined
-5. All forms and tabs should have accessible links
+## Project setup
 
-# Enhancements:
 
 1. Add more functionality to registration and login forms:
 (Email validation, user privacy, enforce proper formating for all fields?
@@ -28,31 +23,47 @@ Define image url, image text and working link to a popular travel website.
 
 ## Technologies/Software
 
-JavaScript, HTML/CSS, Git, VSCode, Codepen
+JavaScript, HTML/CSS, Git, VSCode, Codepen, Node, Pug/Ejs, MongoDB Atlas, Heroku
  
-## Useful links
+## Backend helpful links
 
-https://www.w3schools.com/
-https://css-tricks.com/typography-for-developers/
-https://www.stackoverflow.com/
-https://www.github.com/
-https://picsum.photos/
+https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes
+https://kaloraat.com/articles/how-to-use-mongodb-atlas
+https://www.sitepoint.com/managing-dates-times-using-moment-js/
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
 
 ## Process
 
-The original design started from identifying the information displayed on the index.html using HTML. The idea was to create a basic home page with header, hero section and responsive navigation.
+# Node initialization and preparation
 
-In the header section, I included the website logo as well as navigation tab. I have dicided to locate my navigation panel in the middile of the header instead of following a common practice to place it on the right side of the page header. For each tab in navigation bar I have used icons from Fontawesome. 
+The first step was to get ready an Express web server (localhost:3000) to serve static Travel Experts website which was used as a template for this assignment. I initialized a new project using npm and installed dependencies(express, ejs, dotenv, mongoose, cors, moments, etc.). Installation has been required on every single step of the process. Also, in order to connect with MongoDB the .env file was used for authentication. 
+
+As a result of initialization I created travel custom website where:
+
+1. Style and Scrypt assets were served from a public directory.
+2. All static html files are replaced with EJS templates and stored in /views derectory
+3. Endpoint handlers were created to serve each page template.
+4. I created additional gallery.ejs page for destionations. 
+5. The unique title was set for each page
+6. 404 error was tested to return custom 404 page when end point couldn't be found.    
+7. I have added header_log.ejs, header_reg.ejs and header_gal.ejs to highlight global navigation tabs when on current page.
+
+# Model definition and MongoDB seed.
+
+Once I made global changes and initialized staic travel experts website on localhost:3000 I defned Destinations Mongoose Schema in a dedicated /models directory. 
+
+Before connecting to database I have created ATlas account and made a changes in my Destinations Object of arrays. I added text description for each destination while displaying a destination on single image web page. 
+
+After successful connecting to MongoDB database I had established a larger version of the each gallery image,
+with page heading and longer description than the main gallery.
  
-I have used a main element to locate a title, hero section image and signup bar. In order wrap the elements of the hero section a simple div was used for separation and adjustment in the middle of the page.The same approach was used to create login and registration page. Primary navigation was highlighting rthe current page if on Register or Login.
- 
-While the HTML part was relatively straightforward, the CSS part was quit challenging, especially while building login and Register pages.
-Some links were quite helpful to find the right combination of adjusting parameters to center the elements of the containers.
+# Deploying Heroku application.
 
-In order to highlight some elements I was using background images istead of background colors. All the pictures were taken from Lorem Picsum.
-All the changes and tweaks were done using https://codepen.io/dashboard/ then cleaned and adjusted using VSCode.
+The next step was to create GET /destinations/:id endpoint handler in Express application. I used model.find() to return all destination images from Atlas and then return a JSON list when fetched.The JSON rendered to an identical array that was returned by my connected database.
 
-In order to make static website more responsive I have added JavaScript elements to the original design.That allowed to create image gallery section using forEach loop without using any local images. The gallery takes images from Lorem Picsum through the loop and locate the right items in the object.
+I have setup Heroku account and created https://cprg210-travel.herokuapp.com application. Instead of looping locally defined object of arrays to display my travel destinations I used fetch() to retrieve the same array from a remote JSON endpoint hosted by my app. Once I setup Heroku application I created GitHub repo: https://github.com/vadimsavenkov/WebDev_Heroku_Atlas to connect and successfully deploy dynamic Travel Experts website to Heroku and MongoDB Atlas.
+
 
 ## Acknowledgements
 
