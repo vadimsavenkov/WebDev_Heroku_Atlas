@@ -94,10 +94,10 @@ app.use(function(req, res, next) {
   res.render('404', {page:"404"});
 });
 
-app.use((req, res, next)=>{
-  res.locals.moment = 2020;
-  next();
-});
+// add current year using moment module
+const yearFormat="YYYY"
+app.locals.moment = moment;
+app.locals.yearFormat = yearFormat;
 
 // start up server
 const PORT = process.env.PORT || 3000;
